@@ -19,7 +19,7 @@ namespace TestFramework.white
 
         public static void LogStep(LogLevel logLevel,string message)
         {
-
+           Log.
         }
 
         public void Info(string message)

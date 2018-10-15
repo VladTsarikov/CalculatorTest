@@ -10,10 +10,12 @@ namespace Calculator.windows
 {
     public class MainWindow: BaseWindow
     {
-       // private new const string WindowName = "Calculator";
-        private const string MainLocator = "150";
+        private static readonly Button _btnPlus = new Button(SearchCriteria.ByAutomationId("93"), $"{ButtonsEnum.OperatorsButton.Plus} Button");
+        private static Button _btnResult = new Button(SearchCriteria.ByAutomationId("121"), $"{ButtonsEnum.OperatorsButton.Result} Button");
+        private static Label _lblResultField = new Label(SearchCriteria.ByAutomationId("150"), "Result Field Label");
+        //private const string MainLocator = "150";
         public MenuBar MainMenu = new MenuBar();
-        private const string FuncButtonNamePart = "12";
+        private const string FuncButtonNameLocatorPart = "12";
 
         public MainWindow() : base(ApplicationFactory.Window,"Main Calculator Window")
         {
@@ -34,13 +36,13 @@ namespace Calculator.windows
             switch (function)
             {
                 case ButtonsEnum.FunctionButton.SaveToMemory:
-                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNamePart}5"), $"{ButtonsEnum.FunctionButton.SaveToMemory} Button").Click();
+                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNameLocatorPart}5"), $"{ButtonsEnum.FunctionButton.SaveToMemory} Button").Click();
                     break;
                 case ButtonsEnum.FunctionButton.MemoryClear:
-                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNamePart}2"), $"{ButtonsEnum.FunctionButton.MemoryClear} Button").Click();
+                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNameLocatorPart}2"), $"{ButtonsEnum.FunctionButton.MemoryClear} Button").Click();
                     break;
                 case ButtonsEnum.FunctionButton.UseMemory:
-                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNamePart}3"), $"{ButtonsEnum.FunctionButton.UseMemory} Button").Click();
+                    new Button(SearchCriteria.ByAutomationId($"{FuncButtonNameLocatorPart}3"), $"{ButtonsEnum.FunctionButton.UseMemory} Button").Click();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(function), function, null);

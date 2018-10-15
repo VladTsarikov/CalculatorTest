@@ -15,13 +15,19 @@ namespace TestFramework.white
         protected Window window;
         protected string Title;
 
-//        public (Window window, ScreenRepository screenRepository) : base (window, screenRepository)
-//        {
-//            //ApplicationFactory.SetWindow(window);
-//            Locator = locator;
-//            Title = title;
-//            AssertIsOpen();
-//        }
+        public BaseWindow(Window window, string title) : base(window, null)
+        {
+            Title = title;
+            // AssertIsOpen();
+        }
+
+        //        public (Window window, ScreenRepository screenRepository) : base (window, screenRepository)
+        //        {
+        //            //ApplicationFactory.SetWindow(window);
+        //            Locator = locator;
+        //            Title = title;
+        //            AssertIsOpen();
+        //        }
 
         public void AssertIsOpen()
         {
@@ -33,14 +39,7 @@ namespace TestFramework.white
             catch (AssertionException e)
             {
                 //Logger.Debug(e.Message);
-            }
-            
-        }
-
-        public BaseWindow(Window window, string title) : base(window,new ScreenRepository(ApplicationFactory.Application))
-        {
-            Title = title;
-            AssertIsOpen();
-        }
+            }            
+        }      
     }
 }
