@@ -4,26 +4,26 @@ namespace TestFramework.white
 {
     public class BaseEntity
     {
-        private static TestStack.White.UIItems.WindowItems.Window _window;
+       // private static TestStack.White.UIItems.WindowItems.Window _window;
         protected static Logger Logger = Logger.GetInstance();
         private static readonly string AppPath = AppResource.app_path;
         private static readonly string AppExtension = AppResource.app_extension;
         private static readonly string AppName = AppResource.app_name;
 
-        public static ApplicationFactory GetApplication()
-        {           
-            return ApplicationFactory.GetInstance();
-        }
+//        public static ApplicationFactory GetApplication()
+//        {           
+//            return ApplicationFactory.GetInstance();
+//        }
 
-        public static TestStack.White.UIItems.WindowItems.Window GetWindow()
-        {     
-            return _window;
-        }
+//        public static TestStack.White.UIItems.WindowItems.Window GetWindow()
+//        {     
+//            return _window;
+//        }
 
-        public void SetWindow(string window)
-        {
-            _window = GetApplication().GetWindow(window);
-        }
+//        public void SetWindow(string window)
+//        {
+//            _window = GetApplication().GetWindow(window);
+//        }
 
         protected void Info(string message)
         {
@@ -54,14 +54,14 @@ namespace TestFramework.white
         public static void BeforeTest()
         {
             Logger.Info(Messages.ResourceManager.GetString("test_start"));
-            GetApplication().Launch($"{AppPath}{AppName}{AppExtension}");          
+            ApplicationFactory.Launch($"{AppPath}{AppName}{AppExtension}","Calculator");          
         }
 
         [TearDown]
         public static void AfterTest()
         {            
-            Logger.Info(Messages.ResourceManager.GetString("test_end"));
-            GetWindow().Close();
+            Logger.Info("");
+            ApplicationFactory.Close();
         }
     }
 }

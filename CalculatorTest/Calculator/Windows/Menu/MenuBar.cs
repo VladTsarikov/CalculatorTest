@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestStack.White;
-using TestFramework.white.elements;
+﻿using TestFramework.white.elements;
 using TestStack.White.UIItems.Finders;
 
-namespace CalculatorTest.test.calculator.windows.menu
+namespace Calculator.Windows.Menu
 {
     public class MenuBar
     {

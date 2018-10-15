@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using System;
+using NLog;
 
 namespace TestFramework.white
 {
@@ -14,6 +15,11 @@ namespace TestFramework.white
         public static Logger GetInstance()
         {
             return _instance ?? (_instance = new Logger());
+        }
+
+        public static void LogStep(LogLevel logLevel,string message)
+        {
+
         }
 
         public void Info(string message)

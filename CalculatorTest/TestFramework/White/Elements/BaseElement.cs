@@ -14,7 +14,7 @@ namespace TestFramework.white.elements
 
         public BaseElement(SearchCriteria locator, string name)
         {
-            Element = GetWindow().Get(locator);
+            Element = ApplicationFactory.Window.Get(locator);
             Name = name;
         }
 

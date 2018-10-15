@@ -1,6 +1,6 @@
 ﻿using System;
+using Calculator.Windows.Menu;
 using CalculatorTest.test.calculator.enums;
-using CalculatorTest.test.calculator.windows.menu;
 using Castle.Core.Internal;
 using TestFramework.white;
 using TestFramework.white.elements;
@@ -10,12 +10,12 @@ namespace Calculator.windows
 {
     public class MainWindow: BaseWindow
     {
-        private new const string WindowName = "Calculator";
+       // private new const string WindowName = "Calculator";
         private const string MainLocator = "150";
         public MenuBar MainMenu = new MenuBar();
         private const string FuncButtonNamePart = "12";
 
-        public MainWindow() : base(WindowName, SearchCriteria.ByAutomationId(MainLocator),"Main Calculator Window")
+        public MainWindow() : base(ApplicationFactory.Window,"Main Calculator Window")
         {
         }
 
