@@ -4,7 +4,7 @@ using CalculatorTest.test.calculator.windows.menu;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace CalculatorTest.test.calculator.steps
+namespace CalculatorTest.test.steps
 {
     [Binding]
     internal class CalculatorSteps

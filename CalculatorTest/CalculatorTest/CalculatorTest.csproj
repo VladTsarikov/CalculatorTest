@@ -89,17 +89,17 @@
       <DependentUpon>AppResource.resx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="test\calculator\features\CalculatorTest.feature.cs">
+    <Compile Include="test\features\CalculatorTest.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CalculatorTest.feature</DependentUpon>
     </Compile>
-    <Compile Include="test\calculator\steps\CalculatorSteps.cs" />
-    <Compile Include="test\calculator\steps\Hooks.cs" />
+    <Compile Include="test\steps\CalculatorSteps.cs" />
+    <Compile Include="test\steps\Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="test\calculator\features\CalculatorTest.feature">
+    <None Include="test\features\CalculatorTest.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorTest.feature.cs</LastGenOutput>
     </None>

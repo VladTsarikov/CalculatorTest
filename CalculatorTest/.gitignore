@@ -135,7 +135,7 @@ $RECYCLE.BIN/
 
 # Visual Studio 2014 CTP
 **/*.sln.ide
-**/*.sln
+
 
 # Visual Studio temp something
 .vs/

@@ -53,14 +53,14 @@ namespace TestFramework.white
         [SetUp]
         public static void BeforeTest()
         {
-            Logger.Info("Start testing...");
+            Logger.Info(Messages.ResourceManager.GetString("test_start"));
             GetApplication().Launch($"{AppPath}{AppName}{AppExtension}");          
         }
 
         [TearDown]
         public static void AfterTest()
         {            
-            Logger.Info("Tests has finished");
+            Logger.Info(Messages.ResourceManager.GetString("test_end"));
             GetWindow().Close();
         }
     }

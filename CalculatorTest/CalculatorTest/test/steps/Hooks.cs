@@ -1,7 +1,7 @@
 ﻿using TechTalk.SpecFlow;
 using TestFramework.white;
 
-namespace CalculatorTest.test.calculator.steps
+namespace CalculatorTest.test.steps
 {
     [Binding]
     internal class Hooks

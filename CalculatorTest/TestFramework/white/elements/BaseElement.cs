@@ -47,7 +47,7 @@ namespace TestFramework.white.elements
                 enabled = false;
             }
 
-            Assert.IsTrue(enabled,"Element has not enabled");
+            Assert.IsTrue(enabled,Messages.ResourceManager.GetString("enabled_error"));
         }
 
         public bool IsEnabled()
